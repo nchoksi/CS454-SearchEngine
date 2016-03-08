@@ -5953,3 +5953,12 @@ Caused by: java.io.FileNotFoundException: H:\4thQuarter\cs454-SEO\workspace\inde
 	at java.io.FileInputStream.<init>(Unknown Source) ~[na:1.8.0_66]
 	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:565) ~[org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
 	... 23 common frames omitted
+2016-03-07 18:48:47,762 [Worker-189] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: edu.calstatela.cs454.index:index:1.0-SNAPSHOT @ H:\4thQuarter\cs454-SEO\workspace\index\pom.xml.
+2016-03-07 18:48:49,118 [Worker-189] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-03-07 18:48:49,118 [Worker-189] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory H:\4thQuarter\cs454-SEO\workspace\index\src\main\resources
+2016-03-07 18:48:49,118 [Worker-189] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-03-07 18:48:49,118 [Worker-189] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory H:\4thQuarter\cs454-SEO\workspace\index\src\test\resources
+2016-03-07 18:48:51,641 [Worker-189] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-03-07 18:48:51,656 [Worker-189] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory H:\4thQuarter\cs454-SEO\workspace\index\src\main\resources
+2016-03-07 18:48:51,658 [Worker-189] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-03-07 18:48:51,659 [Worker-189] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory H:\4thQuarter\cs454-SEO\workspace\index\src\test\resources
