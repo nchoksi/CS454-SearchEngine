@@ -7455,3 +7455,20 @@ org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 !SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2016-03-06 19:19:58.050
 !MESSAGE Provided SVN information does not match that on disk for project 'index'.
+
+!ENTRY org.eclipse.core.resources 2 2 2016-03-07 18:40:59.811
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2016-03-07 18:40:59.811
+!MESSAGE The project description file (.project) for 'index' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2016-03-07 18:41:00.991
+!MESSAGE Could not read pom.xml
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2016-03-07 18:41:03.010
+!MESSAGE Could not read pom.xml
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2016-03-07 18:41:04.062
+!MESSAGE Could not read pom.xml
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2016-03-07 18:41:05.164
+!MESSAGE Could not read pom.xml
