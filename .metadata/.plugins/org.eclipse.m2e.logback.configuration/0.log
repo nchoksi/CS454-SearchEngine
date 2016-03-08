@@ -5792,3 +5792,36 @@ org.eclipse.core.runtime.CoreException: Launch configuration Extract references 
 2016-03-07 17:38:39,866 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory H:\4thQuarter\cs454-SEO\workspace\index\src\main\resources
 2016-03-07 17:38:39,866 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2016-03-07 17:38:39,866 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory H:\4thQuarter\cs454-SEO\workspace\index\src\test\resources
+2016-03-07 18:36:00,866 [Worker-180] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: edu.calstatela.cs454.crawler:crawler:1.0-SNAPSHOT @ H:\4thQuarter\cs454-SEO\workspace\crawler\pom.xml.
+2016-03-07 18:36:05,435 [Worker-180] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-03-07 18:36:05,435 [Worker-180] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory H:\4thQuarter\cs454-SEO\workspace\crawler\src\main\resources
+2016-03-07 18:36:05,435 [Worker-180] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-03-07 18:36:05,435 [Worker-180] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory H:\4thQuarter\cs454-SEO\workspace\crawler\src\test\resources
+2016-03-07 18:36:05,535 [Worker-180] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: edu.calstatela.cs454.instructor.crawler:extractor:1.0-SNAPSHOT @ H:\4thQuarter\cs454-SEO\workspace\extractor\pom.xml.
+2016-03-07 18:36:06,554 [Worker-180] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-03-07 18:36:06,554 [Worker-180] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory H:\4thQuarter\cs454-SEO\workspace\extractor\src\main\resources
+2016-03-07 18:36:06,554 [Worker-180] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-03-07 18:36:06,554 [Worker-180] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory H:\4thQuarter\cs454-SEO\workspace\extractor\src\test\resources
+2016-03-07 18:36:06,639 [Worker-180] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: edu.calstatela.cs454.index:index:1.0-SNAPSHOT @ H:\4thQuarter\cs454-SEO\workspace\index\pom.xml.
+2016-03-07 18:36:08,122 [Worker-180] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-03-07 18:36:08,122 [Worker-180] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory H:\4thQuarter\cs454-SEO\workspace\index\src\main\resources
+2016-03-07 18:36:08,122 [Worker-180] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-03-07 18:36:08,122 [Worker-180] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory H:\4thQuarter\cs454-SEO\workspace\index\src\test\resources
+2016-03-07 18:36:10,494 [Worker-179] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2016-03-07 18:36:10,594 [Worker-179] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: edu.calstatela.cs454.index:index:1.0-SNAPSHOT @ H:\4thQuarter\cs454-SEO\workspace\index\pom.xml.
+2016-03-07 18:36:11,563 [Worker-179] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /index/src/main/java
+2016-03-07 18:36:11,563 [Worker-179] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /index/src/test/java
+2016-03-07 18:36:11,839 [Worker-179] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2016-03-07 18:36:13,040 [Worker-182] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-03-07 18:36:13,040 [Worker-182] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory H:\4thQuarter\cs454-SEO\workspace\index\src\main\resources
+2016-03-07 18:36:13,042 [Worker-182] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-03-07 18:36:13,042 [Worker-182] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory H:\4thQuarter\cs454-SEO\workspace\index\src\test\resources
+2016-03-07 18:37:07,569 [Worker-183] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2016-03-07 18:37:07,654 [Worker-183] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: edu.calstatela.cs454.index:index:1.0-SNAPSHOT @ H:\4thQuarter\cs454-SEO\workspace\index\pom.xml.
+2016-03-07 18:37:08,633 [Worker-183] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /index/src/main/java
+2016-03-07 18:37:08,634 [Worker-183] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /index/src/test/java
+2016-03-07 18:37:08,808 [Worker-183] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2016-03-07 18:37:09,852 [Worker-183] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-03-07 18:37:09,853 [Worker-183] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory H:\4thQuarter\cs454-SEO\workspace\index\src\main\resources
+2016-03-07 18:37:09,854 [Worker-183] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-03-07 18:37:09,854 [Worker-183] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory H:\4thQuarter\cs454-SEO\workspace\index\src\test\resources
