@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="Total words" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Total words"/>
+			<item value="Size of Total words"/>
+			<item value="JsonParserException"/>
+			<item value="JsonParse"/>
 			<item value="extract"/>
 			<item value="EXTRACT"/>
 			<item value="EXTRAC"/>
 			<item value="crawl( v, depth )"/>
-			<item value="metadata"/>
-			<item value="depth"/>
-			<item value="stw"/>
-			<item value="codehaus"/>
 		</list>
 		<list key="replacehistory">
 		</list>

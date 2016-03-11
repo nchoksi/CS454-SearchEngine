@@ -35,10 +35,12 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="H:\4thQuarter\cs454-SEO\workspace\index"/>
+			<item value="H:\4thQuarter\cs454-SEO\workspace\extractor"/>
+			<item value="H:\4thQuarter\cs454-SEO\workspace\crawler"/>
+			<item value="H:\4thQuarter\cs454-SEO\workspace\crawler3-app"/>
 			<item value="H:\4thQuarter\cs454-SEO\workspace\crawler3-app\crawler3-app"/>
 			<item value="H:\4thQuarter\cs454-SEO\workspace\extractor\extractor"/>
-			<item value="H:\4thQuarter\cs454-SEO\workspace\crawler3-app"/>
-			<item value="H:\4thQuarter\cs454-SEO\workspace\extractor"/>
 			<item value="H:\4th Quarter\cs454-SEO\workspace\index"/>
 			<item value="H:\4th Quarter\cs454-SEO\workspace\extractor"/>
 			<item value="H:\4th Quarter\cs454-SEO\workspace\crawler3-app"/>

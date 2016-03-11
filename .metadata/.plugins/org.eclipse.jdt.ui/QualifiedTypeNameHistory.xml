@@ -3,8 +3,6 @@
 <fullyQualifiedTypeName name="javax.swing.text.html.HTMLEditorKit.Parser"/>
 <fullyQualifiedTypeName name="javax.swing.text.html.parser.Parser"/>
 <fullyQualifiedTypeName name="org.w3c.dom.NodeList"/>
-<fullyQualifiedTypeName name="java.util.Set"/>
-<fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="java.lang.Process"/>
 <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
 <fullyQualifiedTypeName name="java.io.FileWriter"/>
@@ -34,8 +32,12 @@
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="org.xml.sax.SAXException"/>
 <fullyQualifiedTypeName name="org.apache.tika.exception.TikaException"/>
-<fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="org.codehaus.jackson.map.ObjectMapper"/>
 <fullyQualifiedTypeName name="crawler.Crawl"/>
 <fullyQualifiedTypeName name="java.io.ByteArrayInputStream"/>
+<fullyQualifiedTypeName name="edu.calstatela.cs454.instructor.crawler.Index"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
 </qualifiedTypeNameHistroy>
