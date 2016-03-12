@@ -74,11 +74,13 @@ public class Ranking {
 
                 Integer df = WordsAndDocCoutnt.get( word );
                 df_d = (double) df;
+                System.out.println("df is "+df_d);
 
                 // Find IDF
 
                 Integer TotalDocCount = WordsAndDocCoutnt.get( "TotalDocCount" );
                 Double TotalDocCount_d = (double) TotalDocCount;
+                System.out.println("total d is "+TotalDocCount_d);
 
                 idf = Math.log10( TotalDocCount_d / df_d );
 

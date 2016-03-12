@@ -138,6 +138,7 @@ public class Index {
                     // concate metadata and body content of html
                     String indexing = listString + plainText;
                     String result = indexing.replaceAll( "[,]", "" );
+                    String result1 = result.toLowerCase();
 
                     // seperate sentences to single words
                     /*
@@ -151,32 +152,32 @@ public class Index {
 
                     // --------------------------------------------------------------
 
-                    String[] stringArray = result.split( "\\s+" );
+                    String[] stringArray = result1.split( "\\s+" );
                     List<String> wordList = Arrays.asList( stringArray );
                     // we have list of all words..
                     // we stemm the words and maintain them in List..
-                    final PorterStemmer stemmer = new PorterStemmer();
+                   // final PorterStemmer stemmer = new PorterStemmer();
 
-                    List<String> StemmedList = new ArrayList<String>();
+                    /*List<String> wordList = new ArrayList<String>();
 
                     for( String s : wordList )
                     {
                         stemmer.setCurrent( s );
                         stemmer.stem();
                         final String current = stemmer.getCurrent();
-                        StemmedList.add( current );
+                        wordList.add( current );
                         System.out.println( s + " : " + current );
-                    }
+                    }*/
 
-                    int TotalWordsInDOC = StemmedList.size();
+                    int TotalWordsInDOC = wordList.size();
 
                     // Then make the set so that entry dosent repeats...
 
                     Set<String> StemmedSET = new HashSet<String>();
-                    for( String word1 : StemmedList )
+                    for( String word1 : wordList )
                     {
-
-                        StemmedSET.add( word1 );
+                        
+                        StemmedSET.add( word1.toLowerCase() );
 
                     }
                     for( String word : StemmedSET )
@@ -204,13 +205,14 @@ public class Index {
                         // not in stop words file
                         if( !Stop_Words_List.contains( word ) )
                         {
-                            String Word = word.toLowerCase();
+                            //String Word = word.toLowerCase();
                             obj.put( "link", keyValue.get( "path" ) );
                             obj.put( "title", keyValue.get( "title" ) );
                             obj.put( "url", keyValue.get( "url" ) );
-                            obj.put( "word", Word );
+                            obj.put( "word", word );
                             obj.put( "frequency",
-                                Collections.frequency( StemmedList, word ) );
+                               // Collections.frequency( ranking, word ) );
+                                Collections.frequency( wordList, word ) );
                             obj.put("TotalWords", TotalWordsInDOC);
                         }
                         File f2 = new File( "D:/Neil/Indexed.json" );
@@ -266,7 +268,7 @@ public class Index {
         Index f = new Index();
         try
         {
-            f.listf( directoryname, files );
+           // f.listf( directoryname, files );
         }
         catch( Exception e )
         {

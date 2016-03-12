@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -46,10 +47,12 @@ public class RankingTest {
                 if( word.equals( keyValue.get( "word" ) ) )
                 {
 
-                    String url = (String) keyValue.get( "url" );
+                    //String url = (String) keyValue.get( "path" );
+                    String url = (String) keyValue.get( "link" );
                     Double frq = (Double) keyValue.get( "weight" );
 
                     words.put( url, frq );
+                    
 
                 }
 
@@ -57,6 +60,7 @@ public class RankingTest {
 
             Object[] a = words.entrySet().toArray();
             Arrays.sort( a, new Comparator() {
+            //Arrays.sort( a, new Comparator() {
 
                 public int compare( Object o1, Object o2 )
                 {
@@ -74,6 +78,7 @@ public class RankingTest {
                 // float r1 = Float.parseFloat(r)/100;
                 result.put( ((Map.Entry<String, Double>) e).getValue(),
                     ((Map.Entry<String, Double>) e).getKey() );
+                
                 obj.put( "link", ((Map.Entry<String, Double>) e).getKey() );
                 obj.put( "rank", ((Map.Entry<String, Double>) e).getValue() );
 
