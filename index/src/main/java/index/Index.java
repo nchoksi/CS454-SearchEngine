@@ -153,20 +153,32 @@ public class Index {
 
                     String[] stringArray = result.split( "\\s+" );
                     List<String> wordList = Arrays.asList( stringArray );
-
+                    // we have list of all words..
+                    // we stemm the words and maintain them in List..
                     final PorterStemmer stemmer = new PorterStemmer();
 
-                    Set<String> StemmedSET = new HashSet<String>();
+                    List<String> StemmedList = new ArrayList<String>();
 
                     for( String s : wordList )
                     {
                         stemmer.setCurrent( s );
                         stemmer.stem();
                         final String current = stemmer.getCurrent();
-                        StemmedSET.add( current );
+                        StemmedList.add( current );
                         System.out.println( s + " : " + current );
                     }
 
+                    int TotalWordsInDOC = StemmedList.size();
+
+                    // Then make the set so that entry dosent repeats...
+
+                    Set<String> StemmedSET = new HashSet<String>();
+                    for( String word1 : StemmedList )
+                    {
+
+                        StemmedSET.add( word1 );
+
+                    }
                     for( String word : StemmedSET )
                     {
                         // System.out.println(str);
@@ -198,7 +210,8 @@ public class Index {
                             obj.put( "url", keyValue.get( "url" ) );
                             obj.put( "word", Word );
                             obj.put( "frequency",
-                                Collections.frequency( StemmedSET, word ) );
+                                Collections.frequency( StemmedList, word ) );
+                            obj.put("TotalWords", TotalWordsInDOC);
                         }
                         File f2 = new File( "D:/Neil/Indexed.json" );
                         BufferedWriter file2 = new BufferedWriter(
@@ -264,6 +277,6 @@ public class Index {
         String stw = "Stop_Words_List.txt";
         String index = "index.json";
         String rank = "rank";
-       // new Index().index( controlfile, stw, index, rank );
+         new Index().index( controlfile, stw, index, rank );
     }
 }
