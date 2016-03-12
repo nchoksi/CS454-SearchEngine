@@ -23,5 +23,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/Akhil/Downloads/lucene-snowball-3.0.1.jar/lucene-snowball-3.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/neilc/Desktop/lucene-snowball-3.0.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
