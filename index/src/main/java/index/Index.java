@@ -44,20 +44,13 @@ public class Index {
         File[] fList = directory.listFiles();
         for( File file : fList )
         {
-            /*
-             * String a = file.toString(); String listString = ""; String
-             * indexing = listString + a; String result = indexing.replaceAll(
-             * "[,]", "" ); System.out.println("result" +result);
-             */
-
             if( file.isFile() )
             {
                 files.add( file );
                 // perform replacing of \\ to / here
                 System.out.println( "files:" + files );
-                String f1 = files.toString();
-                
-                
+                String f1 = file.toString();
+
                 String files1 = f1.replace( "\\", "/" );
                 System.out.println( "files1:" + files1 );
                 // writing to JSON
@@ -145,71 +138,44 @@ public class Index {
                     // concate metadata and body content of html
                     String indexing = listString + plainText;
                     String result = indexing.replaceAll( "[,]", "" );
-                    
-                    
+
                     // seperate sentences to single words
-                    /*String[] stringArray = result.split( "\\s+" );
+                    /*
+                     * String[] stringArray = result.split( "\\s+" );
+                     * List<String> wordList = Arrays.asList( stringArray ); //
+                     * add words if not in ranking array for( String word :
+                     * stringArray ) { if( !ranking.contains( word ) ) {
+                     * ranking.add( word ); } ArrayList<String> Stop_Words_List
+                     * = new ArrayList<String>();
+                     */
+
+                    // --------------------------------------------------------------
+
+                    String[] stringArray = result.split( "\\s+" );
                     List<String> wordList = Arrays.asList( stringArray );
-                    // add words if not in ranking array
-                    for( String word : stringArray )
+
+                    final PorterStemmer stemmer = new PorterStemmer();
+
+                    Set<String> StemmedSET = new HashSet<String>();
+
+                    for( String s : wordList )
                     {
+                        stemmer.setCurrent( s );
+                        stemmer.stem();
+                        final String current = stemmer.getCurrent();
+                        StemmedSET.add( current );
+                        System.out.println( s + " : " + current );
+                    }
+
+                    for( String word : StemmedSET )
+                    {
+                        // System.out.println(str);
                         if( !ranking.contains( word ) )
                         {
                             ranking.add( word );
                         }
-                        ArrayList<String> Stop_Words_List = new ArrayList<String>();*/
-                    
-                    
-                
-                    //--------------------------------------------------------------
-                    
-                    String[] stringArray = result.split("\\s+");
-                    List<String> wordList = Arrays.asList(stringArray);
-                    
-                   
-                    
-                       final PorterStemmer stemmer = new PorterStemmer();
-                       
-                     
-                    
-                    Set<String> StemmedSET=new HashSet<String>();
-                    
-                    for(String s:wordList){
-                        
-                        stemmer.setCurrent(s);
-                      
-                        stemmer.stem();
 
-                        
-                        final String current = stemmer.getCurrent();
-                        StemmedSET.add(current);
-                        
-                        System.out.println(s+" : "+current);
-                    }
-                    
-                    //--------------//
-                    
-                    
-                    //--------------------//
-                    
-                    for (String word : StemmedSET)
-                    {
-                       // System.out.println(str);
-                        
-                        if(!ranking.contains(word))
-                        {
-                        ranking.add(word);
-                        }
-                        
-                        
-                        
-                        
-                        
                         ArrayList<String> Stop_Words_List = new ArrayList<String>();
-                    
-                    //-----------------------------------------------------
-                    
-                    
                         FileInputStream fstream = new FileInputStream(
                             "D:/Neil/" + stw );
                         BufferedReader br = new BufferedReader(
@@ -274,7 +240,6 @@ public class Index {
         }
         finally
         {
-
             in.close();
         }
     }
@@ -299,34 +264,6 @@ public class Index {
         String stw = "Stop_Words_List.txt";
         String index = "index.json";
         String rank = "rank";
-        new Index().index( controlfile, stw, index, rank );
-
-        /*
-         * GetOpt options = new GetOpt( "c:s:i:r:H", args ); //Get the arguments
-         * specified for each option. String controlfile =
-         * options.getOptionParam('c'); String stw =
-         * options.getOptionParam('s'); String index = options.getOptionParam(
-         * 'i' ); String rank = options.getOptionParam( 'r' );
-         */
-
-        /*
-         * String controlfile = args[0]; String stw = args[1]; String index =
-         * args[2]; String rank = args[3];
-         */
-
-        /*
-         * File f2 = new File(index);
-         * 
-         * // String controlfile = args[0]; if(f2.exists()) { f2.delete(); }
-         */
-
-        /*
-         * File f3 = new File(rank);
-         * 
-         * if(f3.exists()){ f3.delete(); }
-         */
-        // new Rank().rank(rank);
-        // new Ranktest().rank2("alliance");
-
+       // new Index().index( controlfile, stw, index, rank );
     }
 }
