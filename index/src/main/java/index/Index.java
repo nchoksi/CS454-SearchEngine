@@ -288,7 +288,7 @@ public class Index {
         Index f = new Index();
         try
         {
-            //f.listf( directoryname, files );
+            f.listf( directoryname, files );
         }
         catch( Exception e )
         {
