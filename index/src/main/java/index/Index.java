@@ -26,6 +26,7 @@ import org.apache.tika.parser.html.HtmlParser;
 import org.apache.tika.sax.BodyContentHandler;
 import org.codehaus.jackson.JsonFactory;
 import org.json.simple.JSONObject;
+import org.tartarus.snowball.ext.PorterStemmer;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.SAXException;
 import org.codehaus.jackson.map.ObjectMapper;
@@ -55,6 +56,8 @@ public class Index {
                 // perform replacing of \\ to / here
                 System.out.println( "files:" + files );
                 String f1 = files.toString();
+                
+                
                 String files1 = f1.replace( "\\", "/" );
                 System.out.println( "files1:" + files1 );
                 // writing to JSON
@@ -142,24 +145,71 @@ public class Index {
                     // concate metadata and body content of html
                     String indexing = listString + plainText;
                     String result = indexing.replaceAll( "[,]", "" );
-                    // seperate sentences to single words
-                    String[] stringArray = result.split( "\\s+" );
-                    List<String> wordList = Arrays.asList( stringArray );
-                    System.out.println("Size of Total words: "+wordList.size());
-                    Set<String> wordset = new HashSet<String>();
                     
-                    for(String s : wordList)
-                    {
-                        wordset.add( s );
-                    }
+                    
+                    // seperate sentences to single words
+                    /*String[] stringArray = result.split( "\\s+" );
+                    List<String> wordList = Arrays.asList( stringArray );
                     // add words if not in ranking array
-                    for( String word : wordset )
+                    for( String word : stringArray )
                     {
                         if( !ranking.contains( word ) )
                         {
                             ranking.add( word );
                         }
+                        ArrayList<String> Stop_Words_List = new ArrayList<String>();*/
+                    
+                    
+                
+                    //--------------------------------------------------------------
+                    
+                    String[] stringArray = result.split("\\s+");
+                    List<String> wordList = Arrays.asList(stringArray);
+                    
+                   
+                    
+                       final PorterStemmer stemmer = new PorterStemmer();
+                       
+                     
+                    
+                    Set<String> StemmedSET=new HashSet<String>();
+                    
+                    for(String s:wordList){
+                        
+                        stemmer.setCurrent(s);
+                      
+                        stemmer.stem();
+
+                        
+                        final String current = stemmer.getCurrent();
+                        StemmedSET.add(current);
+                        
+                        System.out.println(s+" : "+current);
+                    }
+                    
+                    //--------------//
+                    
+                    
+                    //--------------------//
+                    
+                    for (String word : StemmedSET)
+                    {
+                       // System.out.println(str);
+                        
+                        if(!ranking.contains(word))
+                        {
+                        ranking.add(word);
+                        }
+                        
+                        
+                        
+                        
+                        
                         ArrayList<String> Stop_Words_List = new ArrayList<String>();
+                    
+                    //-----------------------------------------------------
+                    
+                    
                         FileInputStream fstream = new FileInputStream(
                             "D:/Neil/" + stw );
                         BufferedReader br = new BufferedReader(
@@ -182,8 +232,7 @@ public class Index {
                             obj.put( "url", keyValue.get( "url" ) );
                             obj.put( "word", Word );
                             obj.put( "frequency",
-                                Collections.frequency( wordList, word ) );
-                            obj.put( "TF",  Collections.frequency( wordList, word )/+wordList.size());
+                                Collections.frequency( StemmedSET, word ) );
                         }
                         File f2 = new File( "D:/Neil/Indexed.json" );
                         BufferedWriter file2 = new BufferedWriter(
@@ -235,11 +284,11 @@ public class Index {
     {
         // To Crawl documents inside folders of folders
         ArrayList<File> files = new ArrayList<File>();
-        String directoryname = "D:/Neil/en";
+        String directoryname = "D:/Neil/wiki-small";
         Index f = new Index();
         try
         {
-            f.listf( directoryname, files );
+            //f.listf( directoryname, files );
         }
         catch( Exception e )
         {
