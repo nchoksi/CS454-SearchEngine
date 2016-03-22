@@ -22,5 +22,8 @@
   "Content-Type" : "text/html; charset=UTF-8"
 }
 
-###Project 3 :[Indexing] 
-* OnGoing. TBA
+###Project 3 :[Indexing] (https://github.com/nchoksi/CS454-SearchEngine/tree/master/index)
+* Use Extracted File OR can Extract Data from locally Stored web pages(Folders with in folders)
+* Calculate the FREQUENCY(do indexing of the document) of the words in a document and store it JSON format.
+* Calculate TF-IDF, WEIGHT of the document.
+* Output the highest Ranked page based on the Word/Query Search. 
