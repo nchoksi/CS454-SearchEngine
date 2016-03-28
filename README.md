@@ -1,13 +1,13 @@
 # CS454_Search Engine Projects
 
 
-###Project 1 :[Crawler](https://github.com/nchoksi/CS454_HPN/tree/master/crawler)
+###Project 1 :[Crawler](https://github.com/nchoksi/CS454-SearchEngine/tree/master/crawler)
 * Crawls the given URL to the specified depth of the URL. 
 * Creates a Json file, and write the crawled URL(path), Name of the link and Title of the page.
 
 
 
-###Project 2 :[Extractor](https://github.com/nchoksi/CS454_HPN/tree/master/extractor)  -- (continuation of Project 1) 
+###Project 2 :[Extractor](https://github.com/nchoksi/CS454-SearchEngine/tree/master/extractor)  -- (continuation of Project 1) 
 * Extracts the meta data from the path specified in Crawl.json and Stores all the Metadata in New Json file.
 * Output Example :
 * {
